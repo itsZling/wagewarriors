@@ -1,3 +1,25 @@
+<!--
+    Generates job posting cards.
+
+    If the user is either not authenticated or is logged in as a job-seeker,
+    they will be able to see every job available in the database. Ideally,
+    the jobs more suitable to their skills are displayed first.
+
+    If the user is logged in as a recruiter, they will instead see their job
+    postings, and will have the option to edit their current postings or add
+    additional postings.
+
+    Each job posting will display:
+        - Job Title
+        - Company
+        - Job Location
+        - Description of Job
+        - Job Skills
+        - Salary Lower
+        - Salary Upper
+        - Visa Sponsorship Status
+        - Remote Statys
+-->
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
@@ -7,6 +29,31 @@
             <div class="col mx-auto mb-3">
                 <h2>Jobs Page</h2>
                 <hr>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="card w-75 mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-8 border-end">
+                                    <h3 class="card-title" style="font-size: 24px;">Software Engineer for ChatGPT</h3>
+                                    <h6 class="card-subtitle text-muted fw-normal mb-1" style="text-decoration: none">Job Location | Remote | Visa-Sponsored | $67.67 - $420.69</h6>
+                                    <p class="card-text fw-bold mb-1">Job Description</p>
+                                    <p class="card-text">yo gang come end the earth twin</p>
+                                    <p class="card-text fw-bold">Job Skills</p>
+                                    <ul>
+                                        <li>Item A</li>
+                                        <li>Item B</li>
+                                        <li>Item C</li>
+                                    </ul>
+                                    <a class="btn btn-primary">Apply</a>
+                                </div>
+                                <div class="col-4 text-left">
+                                    <img src="{% static 'img/company-chatgpt.png' %}" class="rounded" width="25" height="25" alt="company icon">
+                                    OpenAI LLC
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

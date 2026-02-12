@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class job(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     skills= models.TextField(blank=True)
     location = models.CharField(max_length=255, blank=True)
